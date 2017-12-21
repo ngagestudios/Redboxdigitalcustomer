@@ -1,0 +1,21 @@
+{
+    "name": "redboxdigital/module-customer",
+    "description": "Demo to added add field to registeration",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Niraj",
+            "email": "nirajketan@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "RedboxDigital\\Customer\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

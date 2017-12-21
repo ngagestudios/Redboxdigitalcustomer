@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+		<plugin disabled="false" name="RedboxDigital_Customer_Plugin_Magento_Checkout_Block_Checkout_LayoutProcessor" sortOrder="10" type="RedboxDigital\Customer\Plugin\Magento\Checkout\Block\Checkout\LayoutProcessor"/>
+	</type>
+	<type name="Magento\Quote\Model\ShippingAddressManagement">
+        <plugin disabled="false" name="RedboxDigital_Customer_Plugin_Magento_Quote_Model_ShippingAddressManagement" sortOrder="10" type="RedboxDigital\Customer\Plugin\Magento\Quote\Model\ShippingAddressManagement"/>
+    </type>
+	<type name="Magento\Quote\Model\BillingAddressManagement">
+        <plugin disabled="false" name="RedboxDigital_Customer_Plugin_Magento_Quote_Model_ShippingAddressManagement" sortOrder="10" type="RedboxDigital\Customer\Plugin\Magento\Quote\Model\BillingAddressManagement"/>
+    </type>
+	<type name="Magento\Sales\Model\Order\CustomerManagement">
+		<plugin disabled="false" name="RedboxDigital_Customer_Plugin_Magento_Sales_Model_Order_CustomerManagement" sortOrder="10" type="RedboxDigital\Customer\Plugin\Magento\Sales\Model\Order\CustomerManagement"/>
+	</type>
+</config>
