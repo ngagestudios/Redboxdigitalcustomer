@@ -9,7 +9,6 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
     "autoload": {
         "psr-4": {
             "RedboxDigital\\Customer\\": ""
@@ -25,6 +24,6 @@
         }
     ],
     "require": {
-        "devredboxdigital/module-customer": "dev-updates"
+        "devredboxdigital/module-customer": "dev-master"
     }
 }
