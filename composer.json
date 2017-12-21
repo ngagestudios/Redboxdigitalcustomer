@@ -17,5 +17,14 @@
         "files": [
             "registration.php"
         ]
+    },
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngagestudios/Redboxdigitalcustomer"
+        }
+    ],
+    "require": {
+        "devredboxdigital/module-customer": "dev-updates"
     }
 }
