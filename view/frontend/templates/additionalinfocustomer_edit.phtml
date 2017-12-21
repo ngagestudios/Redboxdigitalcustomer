@@ -1,10 +1,7 @@
-<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */  echo __('* Required Fields') ?>">
-    <legend class="legend"><span><?php /* @escapeNotVerified */   echo __('Additional Information') ?></span></legend>
-	<div class="field linkedin_profile required">
-		<label for="linkedin_profile" class="label"><span><?php /* @escapeNotVerified */
-				echo __('Linkedin Profile') ?></span></label>
-		<div class="control">
-			<input type="text"  name="linkedin_profile" id="linkedin_profile" title="<?php /* @escapeNotVerified */ echo __('Linkedin Profile') ?>" class="input-text" data-validate="{required:true,'validate-url':true}" value="<?php echo $block->getCustomer()->getExtensionAttributes()->getLinkedinProfile() ?>" />
-		</div>
-	</div>
-</fieldset>
+<?php $LinkedinProfile = $block->getLayout()->createBlock('RedboxDigital\Customer\Block\Widget\LinkedinProfile') ?>
+<?php if ($LinkedinProfile->isEnabled()): ?>
+	<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */  echo __('* Required Fields') ?>">
+		<legend class="legend"><span><?php /* @escapeNotVerified */   echo __('Additional Information') ?></span></legend>
+		<?php echo $LinkedinProfile->setLinkedinProfile($block->getCustomer()->getExtensionAttributes()->getLinkedinProfile())->toHtml() ?>
+	</fieldset>
+<?php endif ?>

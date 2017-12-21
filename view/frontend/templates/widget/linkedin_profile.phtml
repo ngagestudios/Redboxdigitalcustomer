@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Widget\LinkedinProfile $block */
+?>
+<div class="field linkedin_profile <?= $block->isRequired() ? 'required' : '' ?>">
+    <label for="linkedin_profile" class="label">
+        <span>
+            <?= $block->escapeHtml(__('Linkedin Profile')) ?>
+        </span>
+    </label>
+    <div class="control">
+        <?php
+            $_validationClass = $block->escapeHtmlAttr(
+                $this->helper('Magento\Customer\Helper\Address')
+                     ->getAttributeValidationClass('linkedin_profile')
+            );
+        ?>
+        <input type="text"
+               name="linkedin_profile"
+               id="linkedin_profile"
+			   data-validate="{<?= $block->isRequired() ? 'required:true,' : '' ?>'validate-url':true}"
+               value="<?= $block->escapeHtmlAttr($block->getLinkedinProfile()) ?>"
+               title="<?= $block->escapeHtmlAttr(__('Company')) ?>"
+               class="input-text <?= $_validationClass ?: '' ?>"
+         >
+    </div>
+</div>

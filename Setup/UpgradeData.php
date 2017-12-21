@@ -71,7 +71,7 @@ class UpgradeData implements UpgradeDataInterface
         }
 		
 		
-		if (version_compare($context->getVersion(), "1.0.4", "<")) {
+		/* if (version_compare($context->getVersion(), "1.0.4", "<")) {
 			$attribute = $customerSetup->getEavConfig()->getAttribute(\Magento\Customer\Model\Indexer\Address\AttributeProvider::ENTITY, 'linkedin_profile');
 			$used_in_forms[]="adminhtml_customer_address";
 			$used_in_forms[]="customer_address_edit";
@@ -84,7 +84,7 @@ class UpgradeData implements UpgradeDataInterface
 				->setData("sort_order", 100);
 			$attribute->save();
 				
-		}
+		} */
 		
         $setup->endSetup();
     }
