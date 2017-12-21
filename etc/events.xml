@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+  <event name="customer_load_after">
+      <observer name="customer_load_linkedin_profile" instance="RedboxDigital\Customer\Observer\CustomerLoadAfter" />
+  </event>
+  <event name="sales_model_service_quote_submit_before">
+        <observer instance="RedboxDigital\Customer\Observer\ModelServiceQuoteSubmitBefore" name="sales_model_service_quote_submit_before_linkedin_profile"/>
+    </event>
+</config>
